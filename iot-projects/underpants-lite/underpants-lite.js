@@ -19,7 +19,7 @@ var _ = {};
 *       Types are one of:
 *          - "string"
 *          - "array"
-*          - "object"
+*          - "object"s
 *          - "undefined"
 *          - "number"
 *          - "boolean"
@@ -30,7 +30,9 @@ var _ = {};
 * _.typeOf("javascript") -> "string"
 * _.typeOf([1,2,3]) -> "array"
 */
-
+ _.typeOf= function(any){
+return typeof any;
+}
 
 /** _.first
 * Arguments:
@@ -49,7 +51,20 @@ var _ = {};
 *   _.first(["a", "b", "c"], 1) -> "a"
 *   _.first(["a", "b", "c"], 2) -> ["a", "b"]
 */
+function first(arr, num){
+if(arr != arr){
+ return []
+ }
+ else if(typeof num != num){
+    return arr[0]
+ } 
+ else{
+    return arr[0]
+ }
 
+   
+
+}
 
 /** _.last
 * Arguments:
@@ -68,7 +83,17 @@ var _ = {};
 *   _.last(["a", "b", "c"], 1) -> "c"
 *   _.last(["a", "b", "c"], 2) -> ["b", "c"]
 */
-
+function last(arr,num){
+if(arr != arr){
+    return [];
+}   
+ else if(typeof num != num){
+    return arr.length;
+ }
+ else{
+return arr.length;
+ }
+}
 
 /** _.indexOf
 * Arguments:
@@ -85,7 +110,9 @@ var _ = {};
 *   _.indexOf(["a","b","c"], "c") -> 2
 *   _.indexOf(["a","b","c"], "d") -> -1
 */
+function index(arr,value){
 
+}
 
 /** _.contains
 * Arguments:
@@ -101,7 +128,9 @@ var _ = {};
 *   _.contains([1,"two", 3.14], "two") -> true
 *   _.contains([1,"two", 3.14], "three") -> false
 */
+function contains(arr,value){
 
+}
 
 /** _.each
 * Arguments:
@@ -118,8 +147,10 @@ var _ = {};
 *   _.each(["a","b","c"], function(e,i,a){ console.log(e); });
 *      -> should log "a" "b" "c" to the console
 */
+function each(arr, fun){
 
-
+}
+_.each(['a', 'b', 'c'])
 /** _.filter
 * Arguments:
 *   1) An array
@@ -136,7 +167,9 @@ var _ = {};
 * Extra Credit:
 *   use _.each in your implementation
 */
-
+function filter(arr, fun){
+    var arr = [1,2,3,4,5,6,7,8,9];
+}
 
 /** _.map
 * Arguments:
@@ -154,7 +187,9 @@ var _ = {};
 * Examples:
 *   _.map([1,2,3,4], function(e){ return e * 2; }) -> [2,4,6,8]
 */
-
+function map(){
+    
+}
 
 /** _.reject
 * Arguments:
@@ -171,7 +206,9 @@ var _ = {};
 * Examples:
 *   _.reject([1,2,3,4,5], function(e){ return e%2 === 0}; ) -> [1,3,5]
 */
+function reject(arr, fun){
 
+}
 
 /** _.partition
 * Arguments:
@@ -191,7 +228,9 @@ var _ = {};
 *   }); -> [[2,4],[1,3,5]]
 }
 */
+function partition(arr, fun){
 
+}
 
 /** _.every
 * Arguments:
@@ -237,7 +276,7 @@ var _ = {};
 *   _.some([1,3,5], function(e){ return e % 2 === 0}; ) -> false
 *   _.some([1,2,3], function(e){ return e % 2 === 0}; ) -> true
 */
-
+function some()
 
 /** _.pluck
 * Arguments:
