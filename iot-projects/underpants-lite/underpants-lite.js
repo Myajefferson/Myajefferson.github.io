@@ -51,8 +51,8 @@ return typeof any;
 *   _.first(["a", "b", "c"], 1) -> "a"
 *   _.first(["a", "b", "c"], 2) -> ["a", "b"]
 */
-function first(arr, num){
-if(arr != arr){
+_.first= function(arr, num){
+if(arr !== arr){
  return []
  }
  else if(typeof num != num){
@@ -61,9 +61,6 @@ if(arr != arr){
  else{
     return arr[0]
  }
-
-   
-
 }
 
 /** _.last
@@ -83,7 +80,7 @@ if(arr != arr){
 *   _.last(["a", "b", "c"], 1) -> "c"
 *   _.last(["a", "b", "c"], 2) -> ["b", "c"]
 */
-function last(arr,num){
+_.last= function (arr,num){
 if(arr != arr){
     return [];
 }   
@@ -128,8 +125,9 @@ function index(arr,value){
 *   _.contains([1,"two", 3.14], "two") -> true
 *   _.contains([1,"two", 3.14], "three") -> false
 */
-function contains(arr,value){
+_.contains= function(arr,value){
 
+return false;
 }
 
 /** _.each
@@ -147,7 +145,7 @@ function contains(arr,value){
 *   _.each(["a","b","c"], function(e,i,a){ console.log(e); });
 *      -> should log "a" "b" "c" to the console
 */
-function each(arr, fun){
+_.each= function(arr, fun){
 
 }
 _.each(['a', 'b', 'c'])
@@ -276,7 +274,9 @@ function partition(arr, fun){
 *   _.some([1,3,5], function(e){ return e % 2 === 0}; ) -> false
 *   _.some([1,2,3], function(e){ return e % 2 === 0}; ) -> true
 */
-function some()
+function some(){
+
+}
 
 /** _.pluck
 * Arguments:
