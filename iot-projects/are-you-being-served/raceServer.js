@@ -51,7 +51,6 @@ http.createServer(function (req, res) {
 function wrapper(callback) {
     let d = new Date();
     setTimeout(callback, Math.random() * 1000)
-    callback(null, d.getTime())
 }
 
 // sortTogether takes in an array of racer names and an array of times that the racers finished the race.
