@@ -3,6 +3,8 @@ PROJECT: Put together your Pi's hardware and some small programs to test it
 
 
 
+
+
 **Table of Contents**
  
 - [Setup](#setup)
