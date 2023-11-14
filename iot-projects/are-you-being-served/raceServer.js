@@ -38,17 +38,19 @@ http.createServer(function (req, res) {
             for (var i = 0; i < victoryOrder.length; i++) {
                 res.write(victoryOrder[i] + "/n")
             }
+            let d = new Date();
             var endTime = d.getTime()
-            res.end(duration + "\n");
+            let duration = endTime - startTime
+            res.write(duration + "\n");
         }
     );
-
+        res.end()
 }).listen(port);
 
 // TODO 8: create a common function to be called by all functions in the array passed to the async function
 function wrapper(callback) {
+    let d = new Date();
     setTimeout(callback, Math.random() * 1000)
-    callback(null, d.getTime)
 }
 
 // sortTogether takes in an array of racer names and an array of times that the racers finished the race.
