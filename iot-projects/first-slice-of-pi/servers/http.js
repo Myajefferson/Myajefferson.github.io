@@ -1,5 +1,3 @@
-require('./../middleware/converter') 
-require('body-parser')
 const express = require('express'),
 	cors = require('cors');
 	var sensorRoutes = require('./../routes/sensors');
