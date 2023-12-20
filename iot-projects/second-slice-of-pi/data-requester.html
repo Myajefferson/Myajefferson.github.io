@@ -55,8 +55,18 @@
 			const xhttp = new XMLHttpRequest()
 			const url = $('#host').val();
 			xhttp.open("GET",URL,true)
+			xhttp.setRequestHeader("Accept", "text/html");
+			xhttp.send()
 			e.preventDefault();
 		}
+		xhttp.onreadystatechange{
+			if (this.readyState === 4){
+				if(this.status === 200){
+			$('#data').html(this.responseText)
+		}
+		else{
+			$('#data').html("ERROR")
+			}
 
 		$('#message-form').submit(processForm);
 	})(jQuery);
