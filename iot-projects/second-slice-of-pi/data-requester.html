@@ -52,8 +52,9 @@
 	(function ($) {
 		function processForm(e) {
 			// TODO 5: Test Web Page's XMLHttpRequest Client
+			const xhttp = new XMLHttpRequest()
 			const url = $('#host').val();
-
+			xhttp.open("GET",URL,true)
 			e.preventDefault();
 		}
 
