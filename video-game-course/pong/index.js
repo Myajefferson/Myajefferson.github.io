@@ -34,8 +34,8 @@
   // set initial properties for the ball
   ball.x = canvas.width / 2;
   ball.y = canvas.height / 2;
-  ball.xVelocity = 5;
-  ball.yVelocity = 5;
+  ball.xVelocity = 0.5;
+  ball.yVelocity = -5;
 
   // add the paddles and the ball to the view
   stage.addChild(paddlePlayer, paddleCPU, ball);
@@ -91,14 +91,29 @@
     }
 
     // TODO 1: bounce the ball off the top
+   //ball.y += ball.yVelocity
+      if (ball.y <= 0) {
+    ball.yVelocity = -ball.yVelocity;
+  }
 
 
     // TODO 2: bounce the ball off the bottom
-
+    if(ball.y >= canvas.height){
+        ball.yVelocity = -ball.yVelocity;
+    }
 
     // TODO 3: bounce the ball off each of the paddles
+       ballTop = ball.y - ball.radius;
+       ballBottom = ball.y + ball.radius ;
+      
+       ballLeft= ball.x - ball.radius;
+       ballRight = ball.x + ball.radius;
 
+       paddleTop = paddle.y;
+       paddleBottom = paddle.y + paddle.height;
 
+       paddle.Right = paddle.x +paddle.width;
+       paddle.Left =paddle.x;
   }
 
   // helper function that wraps the draw.rect function for easy paddle making
