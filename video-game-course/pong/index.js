@@ -1,4 +1,4 @@
-(function(window, createjs, opspark, _) {
+(function (window, createjs, opspark, _) {
 
   // Variable declarations for libraries and the game engine
   const
@@ -27,6 +27,7 @@
     paddleCPU = createPaddle({ x: canvas.width - 20, y: canvas.height - 100 }),
     ball = draw.circle(20, '#CCC');
 
+    const playerText =draw.textfield("score: 0", "bold 36px Ariel")
   // set initial properties for the paddles 
   paddlePlayer.yVelocity = 0;
   paddleCPU.yVelocity = 6;
@@ -34,8 +35,8 @@
   // set initial properties for the ball
   ball.x = canvas.width / 2;
   ball.y = canvas.height / 2;
-  ball.xVelocity = 0.5;
-  ball.yVelocity = -5;
+  ball.xVelocity = 5;
+  ball.yVelocity = 0.5;
 
   // add the paddles and the ball to the view
   stage.addChild(paddlePlayer, paddleCPU, ball);
@@ -91,29 +92,34 @@
     }
 
     // TODO 1: bounce the ball off the top
-   //ball.y += ball.yVelocity
-      if (ball.y <= 0) {
-    ball.yVelocity = -ball.yVelocity;
-  }
+    //ball.y += ball.yVelocity
+    if (ball.y <= 0) {
+      ball.yVelocity = -ball.yVelocity;
+    }
 
 
     // TODO 2: bounce the ball off the bottom
-    if(ball.y >= canvas.height){
-        ball.yVelocity = -ball.yVelocity;
+    if (ball.y >= canvas.height) {
+      ball.yVelocity = -ball.yVelocity;
     }
 
     // TODO 3: bounce the ball off each of the paddles
-       ballTop = ball.y - ball.radius;
-       ballBottom = ball.y + ball.radius ;
-      
-       ballLeft= ball.x - ball.radius;
-       ballRight = ball.x + ball.radius;
+    detectPaddleCollision(paddleCPU);
+    detectPaddleCollision(paddlePlayer);
 
-       paddleTop = paddle.y;
-       paddleBottom = paddle.y + paddle.height;
+    function detectPaddleCollision(paddle) {
+      ball.Top = ball.y - ball.radius
+      ball.Bottom = ball.y + ball.radius;
 
-       paddle.Right = paddle.x +paddle.width;
-       paddle.Left =paddle.x;
+      ball.Left = ball.x - ball.radius;
+      ball.Right = ball.x + ball.radius;
+
+      paddle.Top = paddle.y
+      paddle.Bottom = paddle.y + paddle.height;
+
+      paddle.Right = paddle.x + paddle.width;
+      paddle.Left = paddle.x;
+    }
   }
 
   // helper function that wraps the draw.rect function for easy paddle making

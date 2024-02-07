@@ -564,12 +564,13 @@
          * @param {Number} y: The y position of the Text.
          * @return {Text} The Text.
          */
-        textfield: function (text, sizeAndFont, color, align, baseline, x, y) {
+        textfield: function (text, sizeAndFont, color, align, baseline, x, y,score) {
             const tf = new createjs.Text(text, sizeAndFont || "15px Arial", color || "#666666");
             tf.textBaseline = baseline || "top";
             tf.textAlign = align || "center";
             tf.x = x;
             tf.y = y;
+            tf.score = 1;
             return tf;
         },
         
