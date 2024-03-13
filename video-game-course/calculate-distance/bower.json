@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "EaselJS": "^1.0.2",
-    "V6": "^0.0.2"
+    "V6": "^0.0.2",
+    "GamingQueen": "https://github.com/Myajefferson/GamingQueen.git#^1.0.1"
   }
 }

@@ -4,16 +4,17 @@
  */
 (function (window, createjs) {
   // TODO 5: Initialize CreateJS //
-  const canvas = document.getElementById("canvas");
-  const stage = new createjs.Stage(canvas);
+  const canvas = document.getElementById("canvas","smile");
+  const stage = new createjs.Stage(canvas,smile);
   // TODO 6: Set the framerate of the Ticker
-  createjs.Ticker.framerate = 58
+  createjs.Ticker.framerate = 60;
 
 
   /*
    * TODO 7:CREATE AND CONFIGURE ANY DISPLAY 
    * OBJECTS AND ADD THEM TO THE DISPLAY LIST HERE
    */
+
 
   // INIT CREATEJS //
   const radius = 25;
@@ -66,7 +67,10 @@ let bounds = 20;
   function update(event) {
   circleContainer.x += eyeSpeed;
   if(circleContainer.x > bounds){
-    eyeSpeed += -1;
+    eyeSpeed *= -1;
+  }
+  if(circleContainer.x < -bounds){
+    eyeSpeed *= -1; 
   }
     stage.update();
   }

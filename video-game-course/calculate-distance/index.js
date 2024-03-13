@@ -1,5 +1,5 @@
 // TODO 4: Add a parameter for your gaming library in the index.js module:
-(function(window, createjs, opspark) {
+(function(window, createjs, opspark,GamingQueen) {
   // OUR MODULE CODE GOES BELOW HERE //
 
   console.log('index.js initialized!');
@@ -56,16 +56,20 @@
     /*
      * TODO 5: use getDistance to calculate the distance between shapeUp and 
      * the mouse. Store the result in a variable called distance:
-     */
-    
-    
-    
+     */  
+    var distance
     /*
      * TODO 6: Check if the mouse is within the area of shapeUp, and set the 
      * alpha property of shapeUp accordingly:
      */
     
-    
+   if(distance < radius){
+shapeUp.alpha = 1;
+shapeOver.alpha = 0;
+   } else {
+    shapeUp.alpha = 0;
+    shapeOver.alpha = 1;
+   }
     /*
      * Update the textfield with the current distance between the mouse and 
      *the edge of the shapeUp
@@ -100,4 +104,4 @@
   // OUR MODULE CODE GOES ABOVE HERE //
   
 // TODO 3: Pass your gaming library into the index.js module:
-}(window, window.createjs, window.opspark));
+}(window, window.createjs, window.opspark,window.GamingQueen));
