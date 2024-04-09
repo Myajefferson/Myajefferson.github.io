@@ -1,0 +1,23 @@
+{
+  "name": "GamingQueen",
+  "main": "index.js",
+  "homepage": "https://github.com/Myajefferson/GamingQueen",
+  "description": "my lovely gaming library for me myself and i ;)",
+  "keywords": [
+    "gaming"
+  ],
+  "authors": [
+    "Mya"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

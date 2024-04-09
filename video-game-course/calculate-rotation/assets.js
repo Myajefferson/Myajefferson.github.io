@@ -1,4 +1,4 @@
-(function(window, opspark) {
+(function (window, createjs, GamingQueen, opspark) {
   const draw = opspark.draw;
 
   /*
@@ -33,10 +33,10 @@
     updateText(textfield, text, canvas, offset = 50) {
       textfield.text = text;
       const textBounds = textfield.getBounds();
-      
+
       // re-center the text each time it changes //
       textfield.x = (canvas.width) / 2;
       textfield.y = canvas.height / 2 + offset;
     }
   };
-}(window, window.opspark));
+}(window, window.createjs, window.gamz, window.opspark));

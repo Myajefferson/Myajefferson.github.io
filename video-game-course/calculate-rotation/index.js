@@ -1,5 +1,5 @@
 // TODO 4: add a param for your game lib last //
-(function(window, opspark) {
+(function(window, createjs, opspark, GamingQueen) {
   console.log('index.js initialized!');
 
   const
@@ -12,13 +12,14 @@
   stage.addChild(textfield);
 
   // try a different hex color if you want //
-  const ship = assets.makeShip('#4286f4');
+  const ship = assets.makeShip('#b6ccfe');
   
   
   // TODO 5: Center the ship on the stage //
-  
-
+ ship.x = canvas.width / 2;
+ ship.y = canvas.height / 2;
   // TODO 6: Add the ship to the stage //
+  stage.addChild.stage;
   
 
   
@@ -53,4 +54,4 @@
     .activateTick();
 
 // TODO 3: pass your game lib last with, window.my-game-lib //
-}(window, window.opspark));
+}(window,window.createjs ,window.opspark, window.gamz));
