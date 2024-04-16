@@ -78,7 +78,7 @@
             distanceY = Math.abs(pointB.y - pointA.y);
           return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
         }
-        calculate
+        
       },
     };
   }(window, window._));
