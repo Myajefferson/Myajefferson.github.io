@@ -21,9 +21,9 @@
          * TODO 8: use your gaming lib to 
          * update the position of the body
          */
-        
+       GamingQueen.phyz.updatePosition(body);
       });
     }
   };
 // TODO 5.c: Replace *my-game-lib* with the name of your game lib
-}(window, window.opspark, window.GamingQueen));
+}(window, window.opspark, window.gamz));
