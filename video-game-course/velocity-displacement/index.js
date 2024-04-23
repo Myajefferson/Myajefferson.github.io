@@ -79,7 +79,8 @@
     // TODO 13: How do we stop the application of forces?
     if (event.key === 'ArrowLeft') {
       ship.rotationalVelocity = 0;
-    } else if (event.key === 'ArrowRight') {
+    }
+     else if (event.key === 'ArrowRight') {
       ship.rotationalVelocity = 0;
     }
     if (event.key === 'ArrowUp') {
@@ -100,7 +101,7 @@
       // we've struck the right side of the area //
       body.x = right - radius;
       body.velocityX *= -1;
-    } else if (body.x < left ) {
+    } else if (body.x < left) {
       // we've struck the left side of the area //
       // TODO 10: Code the reaction to hitting the left side
       body.velocityX *= -1;
@@ -111,7 +112,7 @@
       // we've struck the right side of the area //
       body.y = top + radius;
       body.velocityY *= -1;
-    } else if ( body.y > bottom) {
+    } else if (body.y > bottom) {
       // we've struck the bottom of the area //
       // TODO 12: Code the reaction to hitting the bottom
       body.velocityY *= -1;
