@@ -70,13 +70,13 @@
 
               accelerationOnY = (bodyB.y - springToY) * dampeningForce;
               // TODO 5: Apply acceleration to bodyB
-              accelerationOnX + bodyB.velocityX;
-               accelerationOnY + bodyB.velocityY;
+              bodyB.velocityX += accelerationOnX;
+              bodyB.velocityY += accelerationOnY;
 
               // TODO 6: Apply inverse acceleration to bodyA
-              accerlerationOnX - bodyA.velocityX; 
-               accerlerationOnY - bodyA.velocityY;
-              
+              bodyA.velocityX -= accelerationOnX;
+              bodyA.velocityY -= accelerationOnY;
+
 
             }
           }
