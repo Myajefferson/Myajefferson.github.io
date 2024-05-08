@@ -21,7 +21,7 @@
       
     // create view components here //
     const
-      textfield = draw.textfield('LOBBY', 'bold 60px Arial', '#FFF', ),
+      textfield = draw.textfield('LOBBY', 'bold 60px Arial', '#CE96A6', ),
       menu = opspark.factory.menu(game);
       
     // add all view components to the view container //
@@ -33,7 +33,7 @@
      * Use render() to config and position components.
      */
     function render() {
-      canvas.style.backgroundColor = '#EEE';
+      canvas.style.backgroundImage = "url('https://backiee.com/static/wallpapers/560x315/377587.jpg');"
       
       textfield.alpha = 0;
       textfield.x = canvas.width / 2;

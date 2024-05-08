@@ -29,7 +29,7 @@
         '#FFF',
         '#444',
         1),
-      textfield = draw.textfield('GAME OVER', 'bold 60px Arial', '#CCC', 'left'),
+      textfield = draw.textfield('GAME OVER', 'bold 60px Arial', '#CE96A6', 'left'),
       content = layout({
         background: background,
         children: [textfield, btnLobby, btnPlay], 
@@ -46,7 +46,7 @@
      * Use render() to config and position components.
      */
     function render() {
-      canvas.style.backgroundColor = '#BBB';
+      canvas.style.backgroundImage = "url('https://backiee.com/static/wallpapers/560x315/377587.jpg');"
       
       asset.alpha = 0;
       

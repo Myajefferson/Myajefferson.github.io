@@ -532,9 +532,11 @@
          * @param {Number} blueMax: The maximum blue value, between 0 and 255.
          */
         randomRadialProps: function (area, radiusMin, radiusMax, redMax, greenMax, blueMax) {
-            return {
+           const arr = [ '#FF8C61','#F9FBF2','#00E8FC']
+           const random = Math.floor(Math.random() * arr.length);
+           return {
                 radius: randomIntBetween(radiusMin || 5, radiusMax || 20),
-                color: randomColor(redMax || 255, greenMax || 255, blueMax || 255),
+                color: arr[random],
                 x: (area ? randomIntBetween(area.x || 0, area.width) : 0),
                 y: (area ? randomIntBetween(area.y || 0, area.height) : 0)
             };

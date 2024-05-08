@@ -6,6 +6,12 @@
             "hitTest": "radiiHitTest",
             "dampeningForce": 0.06,
             "rateOfFire": 200
+        },
+        {
+            "name": "Level 2",
+            "hitTest": "radiiHitTest",
+            "dampeningForce": 0.06,
+            "rateOfFire": 200
         }
     ]
 }
