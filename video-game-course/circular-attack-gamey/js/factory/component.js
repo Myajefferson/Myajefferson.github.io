@@ -12,7 +12,7 @@
     function(text, colorUp = '#5cb85c', colorOver = '#4cae4c', scaleWidthToParent = false) {
       const
         container = new createjs.Container(),
-        textfield = draw.textfield(text, 'bold 25px Arial', '#FFF', 'left'),
+        textfield = draw.textfield(text, 'bold 25px Arial', '#ECEBE4', 'left'),
         textfieldBounds = textfield.getBounds();
 
       let
@@ -136,7 +136,7 @@
         backgroundHeight = background.height || background.getBounds().height,
         backgroundContent = draw.rect(backgroundWidth,
           backgroundHeight,
-          '#CCC');
+          '#ECEBE4');
         backgroundContent.alpha = 0;
         backgroundContent.x = backgroundContent.y = -10;
         content.addChild(backgroundContent);

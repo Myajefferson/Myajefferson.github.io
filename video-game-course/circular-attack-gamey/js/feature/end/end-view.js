@@ -20,13 +20,13 @@
     
     // create view components here //
     const
-      btnLobby = button('LOBBY', '#5cb85c', '#4cae4c', true),
-      btnPlay = button('PLAY AGAIN', '#5cb85c', '#4cae4c', true),
+      btnLobby = button('LOBBY', '#1A1B41', '#17183B', true),
+      btnPlay = button('PLAY AGAIN', '#AA4465', '#93032E', true),
       background = draw.roundRect(
         400,
         400,
         4,
-        '#FFF',
+        '#CBCBD4',
         '#444',
         1),
       textfield = draw.textfield('GAME OVER', 'bold 60px Arial', '#CE96A6', 'left'),
