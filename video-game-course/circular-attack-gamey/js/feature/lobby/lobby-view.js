@@ -33,7 +33,7 @@
      * Use render() to config and position components.
      */
     function render() {
-      canvas.style.backgroundImage = "url('https://backiee.com/static/wallpapers/560x315/377587.jpg');"
+      //canvas.style.backgroundImage = "url('https://backiee.com/static/wallpapers/560x315/377587.jpg');"
       
       textfield.alpha = 0;
       textfield.x = canvas.width / 2;

@@ -19,7 +19,7 @@
       container = new createjs.Container();
       
     // create view components here //
-    const textfield = draw.textfield('PLAYING', 'bold 60px Arial', '#D1A7A0');
+    const textfield = draw.textfield('PLAYING', ' 60px fantasy', '#D1A7A0');
     
     // add all view components to the view container //
     container.addChild(textfield);
@@ -30,7 +30,7 @@
      * Use render() to config and position components.
      */
     function render() {
-      canvas.style.backgroundImage = "url('https://backiee.com/static/wallpapers/560x315/377587.jpg')";
+      canvas.style.backgroundImage = "url('https://images8.alphacoders.com/132/1325725.png')";
       // 'https://wallpapercave.com/wp/wp13377123.png
       textfield.alpha = 0;
       textfield.x = canvas.width / 2;
